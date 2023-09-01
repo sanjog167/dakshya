@@ -2754,6 +2754,7 @@ h2 {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+  z-index: 99;
 }
 .home6-hero-content .img-2 {
   position: absolute;
@@ -2763,6 +2764,7 @@ h2 {
   border-radius: 50%;
   height: 100px;
   object-fit: cover;
+  z-index: 99;
 }
 .home6-hero-content .img-3 {
   position: absolute;
@@ -2772,20 +2774,24 @@ h2 {
   width: 100px;
   height: 100px;
   object-fit: cover;
+  z-index: 99;
 }
 .home6-hero-content .img-4 {
   position: absolute;
   left: 90px;
+  z-index: 99;
   top: 100px;
 }
 .home6-hero-content .img-5 {
   position: absolute;
   right: 160px;
   top: -10px;
+  z-index: 99;
 }
 .home6-hero-content .iconbox-small1 {
   bottom: 170px;
   top: auto;
+  z-index: 99;
 }
 .home6-hero-content .iconbox-small1 .icon {
   background-color: #980e25;
@@ -11557,8 +11563,205 @@ hr {
     padding: 20px 0 !important;
   }
 
+  .right-side .mobileprofessional{
+    background: #980e25;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .right-side .ml30{
+    margin-left: 10px !important;
+  }
+
+  .servicesection{
+    margin-top: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .servicecategory {
+    grid-template-columns: repeat(3,1fr);
+}
+
 }
 
 .mobile_logo img{
   width: 90px;
+}
+
+.countersection{
+  background-color: #f4f5f8;
+    padding: 30px 0;
+    border-top: 3px solid #fff;
+    margin-top: -50px;
+    padding-top: 50px !important;
+}
+
+.sticky-left-container {
+  top: 40%;
+  padding: 0;
+  margin: 16px 0 0;
+  position: fixed;
+  left: -167px;
+  width: 200px;
+  z-index: 9999;
+  transform: translateY(-20%);
+}
+
+.sticky-left-container ul {
+  padding-top: 20px!important;
+  background: #980e25;
+  width: 144px;
+  margin-left: 67px;
+  border-radius: 19%;
+  padding: 0 10px 20px 24px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.35);
+}
+
+.sticky-left li {
+  list-style-type: none;
+  background-color: none;
+  color: #fff;
+  height: 43px;
+  padding: 0;
+  margin: 0 0 10px;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.sticky-left li p {
+  padding: 0;
+  float: right;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 43px;
+  white-space: nowrap;
+  color: white;
+}
+
+.sticky-left li:first-child:hover {
+  margin-right: -242px;
+  background: #980e25;
+  border-radius: 25px 25px 25px 0;
+  padding: 0 20px;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: scale(0);
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.location img{
+  width: 100px;
+  height: 100px;
+}
+
+#exampleModal .btn-close{
+  right: 10px;
+}
+
+.modal-content{
+  background: #451c23;
+}
+
+.modal-header{
+  border: none;
+}
+
+.btn-close {
+  background: url(../image/close.png);
+  background-size: cover;
+  color: white;
+  opacity: 1;
+  width: 5px;
+  height: 5px;
+  right: 20px !important;
+  top: 20px;
+
+}
+
+.locationmenu a{
+  cursor: pointer;
+}
+
+@media(max-width:600px){
+  .sticky-left-container {
+   display: none;
+}
+}
+
+.blog .listing-style1 .list-title {
+  font-size: 12px;
+}
+
+.blog .listing-style1 .list-text{
+  color: black;
+}
+
+.blog .listing-style1 .list-title a {
+  color: gray;
+}
+
+.blog .owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cta-service-single{
+  background: url(https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/images/categories_images/banners/1661157564_superduperacserviceoffer.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-service-single::before{
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: -1;
+}
+
+.service-about li{
+  list-style: disc;
+}
+
+.accordion-button{
+  padding: 0 !important;
+}
+
+.accordion-body {
+  padding: 20px 0 !important;
+}
+
+.service-card{
+  position: fixed;
+  bottom: 0;
+  background: #980e25;
+  z-index: 9;
+  height: 500px;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+
+.service-cardlist{
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }

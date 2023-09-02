@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="bidding, fiverr, freelance marketplace, freelancers, freelancing, gigs, hiring, job board, job portal, job posting, jobs marketplace, peopleperhour, proposals, sell services, upwork">
+   
     <!-- css file -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -33,105 +32,94 @@
     <link href="images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
     <link href="images/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon">
 
-<style>
+    <style>
+        .form-input {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: .5rem;
+            box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
+            padding: 1rem;
+            box-sizing: border-box;
+            color: var(--text-color);
+            transition: ease-in-out .3s all;
+        }
+
+        .form-input::placeholder {
+            color: #cbd5e1;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-1);
+        }
+
+        .btn:focus-within,
+        .form-input:focus-within {
+            box-shadow: #f8fafc 0px 0px 0px 2px, #c7d2fe 0px 0px 0px 6px, #0000 0px 1px 2px 0px;
+        }
+
+        textarea.form-input {
+            min-height: 150px;
+        }
+
+        .btn {
+            border: 0;
+            background: red;
+            padding: 1rem;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+        }
 
 
-.form-input {
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: .5rem;
-  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .1);
-  padding: 1rem;
-  box-sizing: border-box;
-  color: var(--text-color);
-  transition: ease-in-out .3s all;
-}
+        .btn-submit {
+            background-color: var(--color-2);
+        }
 
-.form-input::placeholder {
-  color: #cbd5e1;
-}
+     
 
-.form-input:focus {
-  outline: none;
-  border-color: var(--color-1);
-}
+        .pagination {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.btn:focus-within,
-.form-input:focus-within {
-  box-shadow: #f8fafc 0px 0px 0px 2px, #c7d2fe 0px 0px 0px 6px, #0000 0px 1px 2px 0px;
-}
+        .pagination .btn {
+            text-align: center;
+            margin: 0 6px;
+            width: fit-content;
+            background: #980e25;
+            padding: 5px 50px;
+        }
 
-textarea.form-input {
-  min-height: 150px;
-}
+        .tab-status {
+            display: flex;
+            align-items: center;
+        }
 
-.btn {
-  border: 0;
-  background: red;
-  padding: 1rem;
-  border-radius: 25px; 
-  color: white;
-  cursor: pointer;
-}
+        .tab-status span {
+            appearance: none;
+            background: var(--status-btn-bg);
+            border: none;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            margin-right: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.btn[disabled] {
-  opacity: .5;
-  pointer-events: none;
-}
+        .tab-status span.active {
+            background-color: var(--color-2);
+            color: white;
+        }
 
-.btn:hover {
-  background: var(--color-1-hover);
-  transition: ease-in-out .3s all;
-}
-
-.btn-submit {
-  background-color: var(--color-2);
-}
-
-.btn-submit:hover {
-  background-color: var(--color-2-hover);
-}
-
-.pagination {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pagination .btn {
-  width: 100%;
-  text-align: center;
-  margin: 0 6px;
-}
-
-.tab-status {
-  display: flex;
-  align-items: center;
-}
-
-.tab-status span {
-  appearance: none;
-  background: var(--status-btn-bg);
-  border: none;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  margin-right: .5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tab-status span.active {
-  background-color: var(--color-2);
-  color: white;
-}
-
-.hidden {
-  display: none;
-}
-</style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -843,7 +831,7 @@ textarea.form-input {
                                         </ul>
 
 
-                                        <hr class="opacity-100">       
+                                        <hr class="opacity-100">
                                         <h2 style="margin-top: 20px;">Frequently Asked Questions</h2>
                                         <div class="accordion-style1 faq-page ">
                                             <div class="accordion" id="accordionExample">
@@ -862,72 +850,10 @@ textarea.form-input {
                                                             vel donec. Sagittis, id volutpat erat vel.</div>
                                                     </div>
                                                 </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingTwo">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                            aria-expanded="false" aria-controls="collapseTwo">Can I
-                                                            cancel at anytime?</button>
-                                                    </h2>
-                                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">Cras vitae ac nunc orci. Purus amet
-                                                            tortor non at phasellus ultricies hendrerit. Eget a, sit
-                                                            morbi nunc sit id massa. Metus, scelerisque volutpat nec sit
-                                                            vel donec. Sagittis, id volutpat erat vel.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingThree">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                            aria-expanded="false" aria-controls="collapseThree">How do I
-                                                            get a receipt for my purchase?</button>
-                                                    </h2>
-                                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingThree"
-                                                        data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">Cras vitae ac nunc orci. Purus amet
-                                                            tortor non at phasellus ultricies hendrerit. Eget a, sit
-                                                            morbi nunc sit id massa. Metus, scelerisque volutpat nec sit
-                                                            vel donec. Sagittis, id volutpat erat vel.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingFour">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                            aria-expanded="false" aria-controls="collapseFour">Which
-                                                            license do I need?</button>
-                                                    </h2>
-                                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingFour"
-                                                        data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">Cras vitae ac nunc orci. Purus amet
-                                                            tortor non at phasellus ultricies hendrerit. Eget a, sit
-                                                            morbi nunc sit id massa. Metus, scelerisque volutpat nec sit
-                                                            vel donec. Sagittis, id volutpat erat vel.</div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="headingFive">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                            aria-expanded="false" aria-controls="collapseFive">How do I
-                                                            get access to a theme I purchased?</button>
-                                                    </h2>
-                                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingFive"
-                                                        data-bs-parent="#accordionExample">
-                                                        <div class="accordion-body">Cras vitae ac nunc orci. Purus amet
-                                                            tortor non at phasellus ultricies hendrerit. Eget a, sit
-                                                            morbi nunc sit id massa. Metus, scelerisque volutpat nec sit
-                                                            vel donec. Sagittis, id volutpat erat vel.</div>
-                                                    </div>
-                                                </div>
+                                              
                                             </div>
                                         </div>
-                                   
+
                                         <hr class="opacity-100">
                                         <h2 style="margin-top: 20px;">Reviews</h2>
                                         <div class="product_single_content mb50">
@@ -1117,19 +1043,20 @@ textarea.form-input {
                                 </h2>
 
                                 <div>x
-                                <div class="service-cardlist">
-                                    <a href="#">AC Servicing (For Multiple Split AC Unit)                                    </a>
-                                </div>
-                                <div class="service-cardlist">
-                                    <a href="#">AC Servicing (For Multiple Split AC Unit)                                    </a>
-                                </div>
-                                <div class="service-cardlist">
-                                    <a href="#">AC Servicing (For Multiple Split AC Unit)                                    </a>
-                                </div>
-                                <div class="service-cardlist">
-                                    <a href="#">AC Servicing (For Multiple Split AC Unit)                                    </a>
-                                </div>
-                            
+                                    <div class="service-cardlist">
+                                        <a class="list-item" data-bs-toggle="modal" data-bs-target="#serviceModal">AC
+                                            Servicing (For Multiple Split AC Unit) </a>
+                                    </div>
+                                    <div class="service-cardlist">
+                                        <a>AC Servicing (For Multiple Split AC Unit) </a>
+                                    </div>
+                                    <div class="service-cardlist">
+                                        <a>AC Servicing (For Multiple Split AC Unit) </a>
+                                    </div>
+                                    <div class="service-cardlist">
+                                        <a>AC Servicing (For Multiple Split AC Unit) </a>
+                                    </div>
+
                                 </div>
 
 
@@ -1139,31 +1066,106 @@ textarea.form-input {
                 </div>
             </section>
 
-            <div class="container">
-                <div class="tab-status">
-                  <span class="tab active">1</span>
-                  <span class="tab">2</span>
-                </div>
-                <form action="#">
-                  <div role="tab-list">
-                    <div role="tabpanel" id="color" class="tabpanel">
-                      <h3>What is your favorite color?</h3>
-                      <textarea name="color" class="form-input" placeholder="Ruby red"></textarea>
-                    </div>
-                  
-                      <div role="tabpanel" id="occupation" class="tabpanel hidden">
-                      <h3>What is your occupation?</h3>
-                      <textarea name="occupation" class="form-input" placeholder="Web Designer"></textarea>
-                    </div>
-                  </div>
-                    <div class="pagination">
-                      <a class="btn hidden" id="prev">Previous</a>
-                      <a class="btn" id="next">Continue</a>
-                      <button class="btn btn-submit hidden" id="submit">Submit</button>
-                    </div>
-                  </form>
-              </div>
 
+
+
+            <section class="footer-style1 at-home6 pt25 pb-0">
+                <div class="container">
+                    <div class="row bb-white-light pb10 mb60">
+                        <div class="col-md-7">
+                            <div
+                                class="d-block text-center text-md-start justify-content-center justify-content-md-start d-md-flex align-items-center mb-3 mb-md-0">
+                                <a class="fz17 fw500 text-white mr15-md mr30" href="#">Terms of Service</a>
+                                <a class="fz17 fw500 text-white mr15-md mr30" href="#">Privacy Policy</a>
+                                <a class="fz17 fw500 text-white" href="#">Site Map</a>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="social-widget text-center text-md-end">
+                                <div class="social-style1">
+                                    <a class="text-white me-2 fw500 fz17" href="#">Follow us</a>
+                                    <a href="#"><i class="fab fa-facebook-f list-inline-item"></i></a>
+                                    <a href="#"><i class="fab fa-twitter list-inline-item"></i></a>
+                                    <a href="#"><i class="fab fa-instagram list-inline-item"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in list-inline-item"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="link-style1 mb-4 mb-sm-5">
+                                <h5 class="text-white mb15">About</h5>
+                                <div class="link-list">
+                                    <a href="#">About Us</a>
+                                    <a href="#">Careers</a>
+                                    <a href="#">Dakshya Store</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="link-style1 mb-4 mb-sm-5">
+                                <h5 class="text-white mb15">Location</h5>
+                                <ul class="ps-0">
+                                    <li><a href="#">Kathmandu</a></li>
+                                    <li><a href="#">Pokhara</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="link-style1 mb-4 mb-sm-5">
+                                <h5 class="text-white mb15">Support</h5>
+                                <ul class="ps-0">
+                                    <li><a href="#">Help & Support</a></li>
+                                    <li><a href="#">Trust & Safety</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="footer-widget">
+                                <div class="footer-widget mb-4 mb-sm-5">
+                                    <div class="mailchimp-widget">
+                                        <h5 class="title text-white mb20">Subscribe</h5>
+                                        <div class="mailchimp-style1">
+                                            <input type="email" class="form-control bdrs4"
+                                                placeholder="Your email address">
+                                            <button type="submit">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="app-widget mb-4 mb-sm-5">
+                                    <h5 class="title text-white mb20">Apps</h5>
+                                    <div class="row mb-4 mb-lg-5">
+                                        <div class="col-lg-12">
+                                            <a class="app-list d-flex align-items-center mb10" href="#">
+                                                <i class="fab fa-apple fz17 mr15"></i>
+                                                <h6 class="app-title fz15 fw400 mb-0">iOS App</h6>
+                                            </a>
+                                            <a class="app-list d-flex align-items-center" href="#">
+                                                <i class="fab fa-google-play fz15 mr15"></i>
+                                                <h6 class="app-title fz15 fw400 mb-0">Android App</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container white-bdrt1 py-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-center text-lg-start">
+                                <p class="copyright-text mb-0 text-white-light ff-heading">© 023 DakshyaSewa. All rights
+                                    reserved.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -1200,6 +1202,341 @@ textarea.form-input {
                 </div>
             </div>
 
+            <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="fw600">AC Servicing (For Multiple Split AC Unit) </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div>
+                                        <div class="tab-status hidden">
+                                            <span class="tab active">1</span>
+                                            <span class="tab">2</span>
+                                        </div>
+
+                                        <form action="#">
+
+                                            <div role="tab-list">
+                                                <div role="tabpanel" id="color" class="tabpanel">
+                                                    <h5>Select Your AC Unites:</h5>
+                                                    <div class="row h-300 overflow-y-scroll">
+                                                        <div class="col-lg-12">
+                                                            <div class="d-flex align-items-center mb-4">
+                                                                <img style="width: 60px; height: 60px;"
+                                                                    src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/uploads/service/4031/options/1675228811_App_Thumb_480x480.jpg" />
+                                                                <div class="ml20 service-card-details">
+                                                                    <p>Waterproofing with Injection Grouting System
+                                                                    </p>
+                                                                    <p class="mt-2">रु 250 <span class="fw400"> per
+                                                                            point
+                                                                        </span></p>
+                                                                    <p
+                                                                        class="mt-2 fw400 service-card-details-description">
+                                                                        Providing and applying pressure grouting by
+                                                                        injection
+                                                                        system with mixing integral waterproofing
+                                                                        compound.
+
+
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn-initial mlauto">Add</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center mb-4">
+                                                                <img style="width: 60px; height: 60px;"
+                                                                    src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/uploads/service/4031/options/1675228811_App_Thumb_480x480.jpg" />
+                                                                <div class="ml20 service-card-details">
+                                                                    <p>Waterproofing with Injection Grouting System
+                                                                    </p>
+                                                                    <p class="mt-2">रु 250 <span class="fw400"> per
+                                                                            point
+                                                                        </span></p>
+                                                                    <p
+                                                                        class="mt-2 fw400 service-card-details-description">
+                                                                        Providing and applying pressure grouting by
+                                                                        injection
+                                                                        system with mixing integral waterproofing
+                                                                        compound.
+
+
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn-initial mlauto">Add</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center mb-4">
+                                                                <img style="width: 60px; height: 60px;"
+                                                                    src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/uploads/service/4031/options/1675228811_App_Thumb_480x480.jpg" />
+                                                                <div class="ml20 service-card-details">
+                                                                    <p>Waterproofing with Injection Grouting System
+                                                                    </p>
+                                                                    <p class="mt-2">रु 250 <span class="fw400"> per
+                                                                            point
+                                                                        </span></p>
+                                                                    <p
+                                                                        class="mt-2 fw400 service-card-details-description">
+                                                                        Providing and applying pressure grouting by
+                                                                        injection
+                                                                        system with mixing integral waterproofing
+                                                                        compound.
+
+
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn-initial mlauto">Add</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center mb-4">
+                                                                <img style="width: 60px; height: 60px;"
+                                                                    src="https://s3.ap-south-1.amazonaws.com/cdn-shebaxyz/uploads/service/4031/options/1675228811_App_Thumb_480x480.jpg" />
+                                                                <div class="ml20 service-card-details">
+                                                                    <p>Waterproofing with Injection Grouting System
+                                                                    </p>
+                                                                    <p class="mt-2">रु 250 <span class="fw400"> per
+                                                                            point
+                                                                        </span></p>
+                                                                    <p
+                                                                        class="mt-2 fw400 service-card-details-description">
+                                                                        Providing and applying pressure grouting by
+                                                                        injection
+                                                                        system with mixing integral waterproofing
+                                                                        compound.
+
+
+                                                                    </p>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn-initial mlauto">Add</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div role="tabpanel" id="occupation" class="tabpanel hidden">
+                                                    <h6 class="fw600">Date: <span class="fw400"> 2023/09/02 </span></h6>
+                                                    <div class="h-300 overflow-y-scroll">
+                                                        <div class="aiz-radio-inline">
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" checked="">
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="date" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>2</span>
+                                                                    <span>SUN</span>
+                                                                </span>
+                                                            </label>
+
+                                                        </div>
+
+                                                        <h6 class="fw600 mt30">Time:</h6>
+
+                                                        <div class="aiz-radio-inline aiz-grid">
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" checked="">
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>7:00 AM - 9: 00 AM</span>
+                                                                </span>
+                                                            </label>
+
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>9:00 AM - 11: 00 AM</span>
+                                                                </span>
+                                                            </label>
+
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>11:00 AM - 1: 00 PM</span>
+                                                                </span>
+                                                            </label>
+
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>1:00 PM - 3: 00 PM</span>
+                                                                </span>
+                                                            </label>
+
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>3:00 PM - 5: 00 PM</span>
+                                                                </span>
+                                                            </label>
+
+                                                            <label class="aiz-megabox pl-0 mr-2">
+                                                                <input type="radio" name="time" >
+                                                                <span
+                                                                    class="aiz-megabox-elem rounded d-flex flex-direction-column justify-content-center py-2 px-3 mb-2">
+                                                                    <span>5:00 PM - 7: 00 PM</span>
+                                                                </span>
+                                                            </label>
+
+
+
+                                                        </div>
+
+                                                        <h6 class="fw600 mt30">Contact Number:</h6>
+
+                                                        <input class="form-control" type="text" name="number">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="pagination">
+                                                <a class="btn hidden" id="prev">Previous</a>
+                                                <a class="btn" id="next">Continue</a>
+                                                <button class="btn btn-submit hidden" id="submit">Book Now</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="d-flex align-items-center mb-4 justify-content-between">
+
+                                                <div class="ml20 service-card-details subtotal-details">
+                                                    <p>Waterproofing with Injection Grouting System
+                                                    </p>
+
+                                                    <p class="fw400 mt10">2 AC Units (1-1.5 Ton)</p>
+
+
+                                                </div>
+                                                <div>
+                                                    <p class="fw600">रु 250</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mb-4 justify-content-between">
+
+                                                <div class="ml20 service-card-details subtotal-details">
+                                                    <p>Waterproofing with Injection Grouting System
+                                                    </p>
+
+                                                    <p class="fw400 mt10">2 AC Units (1-1.5 Ton)</p>
+
+
+                                                </div>
+                                                <div>
+                                                    <p class="fw600">रु 250</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center mb-4 justify-content-between">
+
+                                                <div class="ml20 service-card-details subtotal-details">
+                                                    <p>Waterproofing with Injection Grouting System
+                                                    </p>
+
+                                                    <p class="fw400 mt10">2 AC Units (1-1.5 Ton)</p>
+
+
+                                                </div>
+                                                <div>
+                                                    <p class="fw600">रु 250</p>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="d-flex align-items-center mb-4 justify-content-between subtotal">
+
+                                                <div class=" service-card-details subtotal-details">
+                                                    <p>Subtotal
+                                                    </p>
+
+
+
+                                                </div>
+                                                <div>
+                                                    <p class="fw600 mb-0">रु 4,200</p>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
             <a class="scrollToHome at-home2" href="#"><i class="fas fa-angle-up"></i></a>
         </div>
@@ -1221,98 +1558,88 @@ textarea.form-input {
     <script src="js/script.js"></script>
 
     <script>
-        const previousButton = document.querySelector('#prev')
-const nextButton = document.querySelector('#next')
-const submitButton = document.querySelector('#submit')
-const tabTargets = document.querySelectorAll('.tab')
-const tabPanels = document.querySelectorAll('.tabpanel')
-const isEmpty = (str) => !str.trim().length
-let currentStep = 0
+        $(document).ready(function () {
+            const tabTargets = $('.tab');
+            const tabPanels = $('.tabpanel');
+            let currentStep = 0;
 
-// Validate first input on load
-validateEntry()
+            // Validate first input on load
+            validateEntry();
 
-// Next: Change UI relative to current step and account for button permissions
-nextButton.addEventListener('click', (event) => {
-  event.preventDefault()
+            // Next: Change UI relative to current step and account for button permissions
+            $('#next').click(function () {
+                // Hide current tab
+                tabPanels.eq(currentStep).addClass('hidden');
+                tabTargets.eq(currentStep).removeClass('active');
 
-  // Hide current tab
-  tabPanels[currentStep].classList.add('hidden')
-  tabTargets[currentStep].classList.remove('active')
+                // Show next tab
+                currentStep++;
+                tabPanels.eq(currentStep).removeClass('hidden');
+                tabTargets.eq(currentStep).addClass('active');
 
-  // Show next tab
-  tabPanels[currentStep + 1].classList.remove('hidden')
-  tabTargets[currentStep + 1].classList.add('active')
-  currentStep += 1
-  
-  validateEntry()
-  updateStatusDisplay()
-})
+                validateEntry();
+                updateStatusDisplay();
+            });
 
-// Previous: Change UI relative to current step and account for button permissions
-previousButton.addEventListener('click', (event) => {
-  event.preventDefault()
+            // Previous: Change UI relative to current step and account for button permissions
+            $('#prev').click(function () {
+                event.preventDefault();
 
-  // Hide current tab
-  tabPanels[currentStep].classList.add('hidden')
-  tabTargets[currentStep].classList.remove('active')
+                // Hide current tab
+                tabPanels.eq(currentStep).addClass('hidden');
+                tabTargets.eq(currentStep).removeClass('active');
 
-  // Show previous tab
-  tabPanels[currentStep - 1].classList.remove('hidden')
-  tabTargets[currentStep - 1].classList.add('active')
-  currentStep -= 1
+                // Show previous tab
+                currentStep--;
+                tabPanels.eq(currentStep).removeClass('hidden');
+                tabTargets.eq(currentStep).addClass('active');
 
-  nextButton.removeAttribute('disabled')
-  updateStatusDisplay()
-})
+                $('#next').removeAttr('disabled');
+                updateStatusDisplay();
+            });
 
+            function updateStatusDisplay() {
+                // If on the last step, hide the next button and show submit
+                if (currentStep === tabTargets.length - 1) {
+                    $('#next').addClass('hidden');
+                    $('#prev').removeClass('hidden');
+                    $('#submit').removeClass('hidden');
+                    validateEntry();
+                } else if (currentStep == 0) {
+                    $('#next').removeClass('hidden');
+                    $('#prev').addClass('hidden');
+                    $('#submit').addClass('hidden');
+                } else {
+                    $('#next').removeClass('hidden');
+                    $('#prev').removeClass('hidden');
+                    $('#submit').addClass('hidden');
+                }
+            }
 
-function updateStatusDisplay() {
-  // If on the last step, hide the next button and show submit
-  if (currentStep === tabTargets.length - 1) {
-    nextButton.classList.add('hidden')
-    previousButton.classList.remove('hidden')
-    submitButton.classList.remove('hidden')
-    validateEntry()
+            function validateEntry() {
+                let input = tabPanels.eq(currentStep).find('.form-input');
 
-    // If it's the first step hide the previous button
-  } else if (currentStep == 0) {
-    nextButton.classList.remove('hidden')
-    previousButton.classList.add('hidden')
-    submitButton.classList.add('hidden')
-    // In all other instances display both buttons
-  } else {
-    nextButton.classList.remove('hidden')
-    previousButton.classList.remove('hidden')
-    submitButton.classList.add('hidden')
-  }
-}
+                // Start by disabling continue button
 
-function validateEntry() {
-  let input = tabPanels[currentStep].querySelector('.form-input')
-  
-  // Start but disabling continue button
-  nextButton.setAttribute('disabled', true)
-  submitButton.setAttribute('disabled', true)
-  
-  // Validate on initial function fire
-  setButtonPermissions(input)
-  
-  // Validate on input
-  input.addEventListener('input', () => setButtonPermissions(input))
-  // Validate if bluring from input
-  input.addEventListener('blur', () => setButtonPermissions(input))
-}
+                // Validate on initial function fire
+                setButtonPermissions(input);
 
-function setButtonPermissions(input) {
-  if (isEmpty(input.value)) {
-    nextButton.setAttribute('disabled', true)
-    submitButton.setAttribute('disabled', true)
-  } else {
-    nextButton.removeAttribute('disabled')
-    submitButton.removeAttribute('disabled')
-  }
-}
+                // Validate on input
+                input.on('input', function () {
+                    setButtonPermissions(input);
+                });
+
+                // Validate if blurring from input
+                input.on('blur', function () {
+                    setButtonPermissions(input);
+                });
+            }
+
+            function setButtonPermissions(input) {
+                // Your validation logic here
+                // You can enable/disable the button as needed
+            }
+        });
     </script>
 
 

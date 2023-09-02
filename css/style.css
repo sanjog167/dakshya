@@ -11668,15 +11668,15 @@ hr {
   right: 10px;
 }
 
-.modal-content{
+#exampleModal .modal-content{
   background: #451c23;
 }
 
-.modal-header{
+#exampleModal .modal-header{
   border: none;
 }
 
-.btn-close {
+#exampleModal .btn-close {
   background: url(../image/close.png);
   background-size: cover;
   color: white;
@@ -11764,4 +11764,140 @@ hr {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+#serviceModal .modal-dialog {
+  max-width: 1050px;
+  border-radius: 10px;
+}
+
+.service-card-details p{
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+  max-width: 400px;
+}
+
+.service-card-details-description{
+  font-weight: 400 !important;
+  font-size: 12px;
+}
+
+.btn-initial{
+  padding: 0 20px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.mlauto{
+  margin-left: auto;
+}
+
+.h-300{
+  height: 300px;
+} 
+
+.overflow-y-scroll{
+  overflow-y: scroll;
+}
+
+/*aiz megabox*/
+
+.aiz-radio-inline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aiz-megabox {
+  position: relative;
+  cursor: pointer;
+}
+.aiz-megabox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.aiz-megabox .aiz-megabox-elem {
+  border: 1px solid #e2e5ec;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+}
+.aiz-megabox > input:checked ~ span .aiz-rounded-check:after,
+.aiz-megabox > input:checked ~ span .aiz-square-check:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.aiz-megabox > input:checked ~ .aiz-megabox-elem,
+.aiz-megabox > input:checked ~ .aiz-megabox-elem {
+  background: rgb(152, 14, 37);
+  color: white;
+}
+
+.flex-direction-column{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aiz-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 10px;
+}
+
+.aiz-grid label{
+  font-size: 12px;
+}
+
+.subtotal-details p{
+  max-width: 300px;
+}
+
+.fw400{
+  font-weight: 400 !important;
+}
+
+.subtotal{
+  margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    padding-right: 20px;
+    background: #f5f5f8;
+    padding: 10px;
+}
+
+.pagination .btn{
+  color: white !important;
+}
+
+.pagination .btn:hover{
+  color: white !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

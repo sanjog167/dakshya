@@ -3352,7 +3352,7 @@ h2 {
   font-weight: 600;
   font-size: 60px;
   line-height: 1;
-  color: #E1C03F;
+  color: #980e25;
 }
 
 .review-list .list-number {
@@ -3375,7 +3375,7 @@ h2 {
   }
 }
 .review-list .progress-bar {
-  background-color: #E1C03F;
+  background-color: #980e25;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -8520,7 +8520,7 @@ li.mm-listitem:focus {
   width: 100%;
 }
 .progressbar-style1 .progressd-bar {
-  background-color: #E1C03F;
+  background-color: #980e25;
   border-radius: 10px;
   position: absolute;
   height: 10px;
@@ -10936,7 +10936,7 @@ input:focus-visible {
 }
 
 .review-color {
-  color: #E1C03F;
+  color: #980e25;
 }
 
 .review-color2 {
@@ -11643,7 +11643,7 @@ hr {
   color: white;
 }
 
-.sticky-left li:first-child:hover {
+.sticky-left li:hover {
   margin-right: -242px;
   background: #980e25;
   border-radius: 25px 25px 25px 0;
@@ -11900,4 +11900,13 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.nav-pills .nav-link {
+  color: #980e25;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #980e25 !important;
 }

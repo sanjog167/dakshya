@@ -73,6 +73,10 @@ body {
   scroll-behavior: auto !important;
 }
 
+.text-main{
+  color: #980e25;
+}
+
 body {
   background-color: #ffffff;
   font-family: var(--body-font-family);
@@ -802,7 +806,8 @@ h2 {
   flex-shrink: 0;
   height: calc(100% - 90px);
   left: 0;
-  margin-top: 80px;
+  margin-top: 0;
+  top: 0;
   overflow-y: scroll;
   padding: 30px 30px 30px 0;
   padding-bottom: 40px;
@@ -824,7 +829,6 @@ h2 {
 }
 
 .dashboard__main {
-  margin-top: 85px;
   padding-left: 300px;
   width: 100%;
 }
@@ -836,7 +840,7 @@ h2 {
 
 .dashboard__content {
   border-radius: 4px;
-  padding: 60px 60px 20px;
+  padding: 30px;
   width: 100%;
 }
 @media (max-width: 767.98px) {
@@ -2754,7 +2758,7 @@ h2 {
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  z-index: 99;
+  z-index: -1;
 }
 .home6-hero-content .img-2 {
   position: absolute;
@@ -2764,7 +2768,7 @@ h2 {
   border-radius: 50%;
   height: 100px;
   object-fit: cover;
-  z-index: 99;
+  z-index: -1;
 }
 .home6-hero-content .img-3 {
   position: absolute;
@@ -2774,24 +2778,24 @@ h2 {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  z-index: 99;
+  z-index: -1;
 }
 .home6-hero-content .img-4 {
   position: absolute;
   left: 90px;
-  z-index: 99;
+  z-index: -1;
   top: 100px;
 }
 .home6-hero-content .img-5 {
   position: absolute;
   right: 160px;
   top: -10px;
-  z-index: 99;
+  z-index: -1;
 }
 .home6-hero-content .iconbox-small1 {
   bottom: 170px;
   top: auto;
-  z-index: 99;
+  z-index: -1;
 }
 .home6-hero-content .iconbox-small1 .icon {
   background-color: #980e25;
@@ -11865,12 +11869,11 @@ hr {
 
 .subtotal{
   margin-top: auto;
-    position: absolute;
-    bottom: 0;
     width: -webkit-fill-available;
     padding-right: 20px;
     background: #f5f5f8;
     padding: 10px;
+    margin-bottom: 0 !important;
 }
 
 .pagination .btn{
@@ -11902,11 +11905,148 @@ hr {
   background: #555;
 }
 
-.nav-pills .nav-link {
+.detail_tab .nav-pills .nav-link {
   color: #980e25;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.detail_tab .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
   background-color: #980e25 !important;
+}
+
+.ekabadservice{
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ekabadservice h3{
+  font-size: 18px;
+    padding: 5px;
+    height: 45px;
+    color: #980e25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.point_card{
+  background: #f1f1f1;
+  border: 1px dashed red;
+  padding: 10px;
+}
+
+.point_card img{
+  margin-right: 15px;
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.point_card p{
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.expired_date h4{
+  font-size: 14px;
+}
+
+.point_card button{
+  text-align: center;
+  margin: 0 6px;
+  width: fit-content;
+  background: #980e25;
+  padding: 0px 20px;
+  border-radius: 999px;
+  color: white;
+  border: none;
+}
+
+.point_card button img{
+  width: 25px;
+  margin-right: 10px;
+}
+
+.background-overlay{
+  background: url(https://pagebolt.uicore.co/mobile-app/wp-content/uploads/sites/5/2023/03/Mobile-App-Hero-BG.webp);
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-position: center;
+}
+
+.mainsection h1{
+  font-size: 70px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.mainsection p{
+  font-size: 23px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  margin: 30px;
+}
+
+.mainsection{
+  display: grid;
+  place-items: center;
+  background: #fafafa;
+}
+
+.search-suggestions{
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.has-service .overlay{
+  z-index: -1;
+  position: initial;
+}
+
+/*	Home 6 Banner */
+
+
+.has-service .home6-hero-content .img-1 {
+  z-index:99;
+}
+.has-service .home6-hero-content .img-2 {
+
+  z-index:99;
+}
+.has-service .home6-hero-content .img-3 {
+
+  z-index:99;
+}
+.has-service .home6-hero-content .img-4 {
+
+  z-index:99;
+
+}
+.has-service .home6-hero-content .img-5 {
+
+  z-index:99;
+}
+.has-service .home6-hero-content .iconbox-small1 {
+
+  z-index:99;
 }

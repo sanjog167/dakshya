@@ -291,34 +291,22 @@
                                 <ul class="px-0 m-0 pb-4">
                                   <li>
                                     <div class="info-product">
-                                      <div class="item_title">mobile app development</div>
+                                      <a class="item_title">Plumbing</a>
                                     </div>
                                   </li>
+
                                   <li>
                                     <div class="info-product">
-                                      <div class="item_title">mobile app builder</div>
+                                      <a class="item_title">Handicraft</a>
                                     </div>
                                   </li>
+
                                   <li>
                                     <div class="info-product">
-                                      <div class="item_title">mobile legends</div>
+                                      <a class="item_title">Cleaning</a>
                                     </div>
                                   </li>
-                                  <li>
-                                    <div class="info-product">
-                                      <div class="item_title">mobile app ui ux design</div>
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <div class="info-product">
-                                      <div class="item_title">mobile game app development</div>
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <div class="info-product">
-                                      <div class="item_title">mobile app design</div>
-                                    </div>
-                                  </li>
+                               
                                 </ul>
                               </div>
                             </div>
@@ -1301,7 +1289,9 @@
         </div>
       </section>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="overlay"></div>
+
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -1332,7 +1322,7 @@
 
           </div>
         </div>
-      </div>
+      </div> -->
 
 
       <a class="scrollToHome at-home2" href="#"><i class="fas fa-angle-up"></i></a>
@@ -1360,6 +1350,26 @@
       $('#exampleModal').modal('show');
     });
   </script>
+
+
+<script>
+  $(document).ready(function () {
+    // Get all the links with the class "item_title"
+    var serviceLinks = $(".item_title");
+
+    // Add a click event listener to each link
+    serviceLinks.on("click", function () {
+      // Get the text of the clicked link
+      var serviceName = $(this).text();
+
+      // Remove any previously added classes from the body
+      $("body").removeClass();
+
+      // Add a class to the body based on the selected service
+      $("body").addClass("has-service");
+    });
+  });
+</script>
 
 
 
